@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CK Test</title>
+<script type="text/javascript" src="prototype.js"></script>
+<script type="text/javascript" src="../soeditor.js"></script>
+<script type="text/javascript">
+
+var single;
+
+Event.observe(document, 'dom:loaded', function()
+{
+	$$('.editme').each(function(item)
+	{
+		item.observe('click', function()
+		{
+			if (single)
+			{
+				single.editor.destroy();
+				single.editor = null;
+			}
+			
+			if (!item.editor)
+			{
+				var dimensions = item.getDimensions();
+				
+				item.editor = CKEDITOR.replace(item,
+				{
+		        	toolbar : 'Basic',
+		        	uiColor : '#9AB8F3',
+		        	sharedSpaces :
+		    		{
+		    			top : 'toolbar',
+		    			bottom : 'footer'
+		    		},
+		    		removePlugins : 'resize,elementspath',
+		    		
+		    		//extraPlugins: 'autogrow',
+		    		
+		    		width: dimensions.width,
+		    		height: dimensions.height,
+		    		
+		    		toolbarCanCollapse: false,
+		    		
+		    		startupShowBorders: false, //??
+		    		startupOutlineBlocks: false, //??
+		    		
+		    		//editingBlock: false,
+		    		
+		    		skin: 'so,../skins/so/skin.js',
+		    		
+		    		docType: '<!DOCTYPE HTML>',
+		    	});
+				
+				//item.editor.resize(dimensions.width, dimensions.height, true);
+				
+				single = item;
+			}
+			
+			console.log(item.editor);
+		});
+	});
+});
+
+</script>
+
+<style type="text/css">
+body
+{
+	background-color: #ffc;
+}
+
+span.cke_skin_kama {
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+border-radius: 0px;
+border: 0px solid lightGrey;
+padding: 0px;
+border-image: initial;
+}
+
+ .cke_skin_v2 .cke_contents { background-color:transparent !important; }
+ 
+ html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, blockquote, table, tr, td, img, fieldset, a, p { margin:0; padding:0; vertical-align:baseline; }
+ul, ol { list-style-type:inside; padding-left:2em; }
+table { width:100%; }
+body, table, select, textarea, input, button { color:#333; font-size:11px; font-family:'Lucida Grande', Arial, Verdana, sans-serif; }
+.border { position:relative; background:#e5e5e5; border:1px solid #bbb; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }
+.html .border { background:#e5e5e5; background:-moz-linear-gradient(top, #e5e5e5 0.0%, #f6f6f6 100.0%); background:-webkit-gradient(linear, left top, left bottom, color-stop(0.0%,#e5e5e5), color-stop(100.0%,#f6f6f6)); filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#f6f6f6',GradientType=0 ); }
+ 
+
+</style>
+</head>
+<body>
+<div id="toolbar"></div>
+<hr>
+<div class="editme">
+This is <b>simple</b> text to edit
+</div>
+
+<hr>
+
+<div class="editme" style="font-size: 100px">
+Yet another <b>simple</b> test
+</div>
+
+<hr>
+<div id="footer"></div>
+
+</div>
+</body>
+</html>

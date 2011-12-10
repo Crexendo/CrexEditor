@@ -1,0 +1,20 @@
+CKEditor Customization Notes
+
+SOEditor is a customized version of CKEditor.  The unused plugins have been removed, our custom skin is packaged, and the english lang file is included.
+
+1.  Files Details
+	a.  ckpackager.jar  -  used to package source js
+	b.  soeditor.js	- the packaged js file that will copied into server
+	c.  soeditor.pack -  the configuration file for the ckpackager
+	d.  soskin - source files for the custom skin packed with the editor
+	e.  source - unmodified source from the ckeditor release file
+	f.  test - simple testing files used for development
+		
+		
+2.  Packaging
+	Packaging will combine and compress files from source and soskin (see soeditor.pack) into a single file, soeditor.js.  
+	
+	Run:
+	java -jar ckpackager.jar soeditor.pack
+	
+	Copy the soeditor.js into the
