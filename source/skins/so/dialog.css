@@ -124,6 +124,12 @@ body .cke_dialog
 	margin-top: 11px;
 	position: absolute;
 	z-index: 2;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 .cke_skin_so .cke_browser_iequirks .cke_dialog_tabs,

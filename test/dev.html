@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Source Test</title>
+
+<script type="text/javascript" src="../ckeditor/_source/core/ckeditor_base.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/event.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/editor_basic.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/env.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/ckeditor_basic.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/tools.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dtd.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/event.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/domobject.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/window.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/document.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/node.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/nodelist.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/element.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/command.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/config.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/focusmanager.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/lang.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/scriptloader.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/resourcemanager.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/plugins.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/skins.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/themes.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/ui.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/editor.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/htmlparser.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/htmlparser/comment.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/htmlparser/text.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/htmlparser/cdata.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/htmlparser/fragment.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/htmlparser/element.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/htmlparser/filter.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/htmlparser/basicwriter.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/_bootstrap.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/ckeditor.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/comment.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/elementpath.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/text.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/documentfragment.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/walker.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/range.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/core/dom/rangelist.js"></script>
+
+<script type="text/javascript" src="../ckeditor/_source/lang/en.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/about/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/a11yhelp/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/blockquote/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/basicstyles/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/button/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/clipboard/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/colorbutton/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/colordialog/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/contextmenu/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/dialogadvtab/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/elementspath/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/enterkey/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/entities/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/filebrowser/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/find/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/flash/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/font/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/format/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/horizontalrule/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/htmldataprocessor/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/image/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/indent/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/justify/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/keystrokes/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/link/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/list/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/liststyle/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/maximize/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/pastefromword/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/pastetext/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/popup/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/removeformat/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/resize/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/save/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/showblocks/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/showborders/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/sourcearea/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/stylescombo/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/table/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/tabletools/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/specialchar/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/tab/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/toolbar/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/undo/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/wysiwygarea/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/dialog/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/styles/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/styles/styles/default.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/domiterator/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/panelbutton/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/floatpanel/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/menu/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/editingblock/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/selection/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/fakeobjects/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/richcombo/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/htmlwriter/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/menubutton/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/dialogui/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/panel/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/plugins/listblock/plugin.js"></script>
+<script type="text/javascript" src="../ckeditor/_source/themes/default/theme.js"></script>
+
+<script type="text/javascript" src="../source/skins/so/skin.js"></script>
+
+<script type="text/javascript" src="../ckeditor/_source/plugins/image/dialogs/image.js"></script>
+
+<script type="text/javascript">
+
+function startup()
+{
+	CKEDITOR.editorConfig = function( config )
+	{
+		config.removePlugins = 'bidi,div,forms,iframe,newpage,pagebreak,preview,print,scayt,smiley,styles,templates,wsc';
+
+		config.toolbar = 'SOToolbar';
+		 
+		config.toolbar_SOToolbar =
+		[
+			{ name: 'document', items : [ 'Source' ] },
+			{ name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+			{ name: 'editing', items : [ 'Find','Replace','-','SelectAll' ] },
+			//'/',
+			{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+			{ name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ] },
+	        { name: 'links', items : [ 'Link','Unlink' ] },
+	        { name: 'insert', items : [ 'Image','Flash','Table','HorizontalRule','SpecialChar' ] },
+	        //'/',
+	        { name: 'styles', items : [ 'Format','Font','FontSize' ] },
+	        { name: 'colors', items : [ 'TextColor','BGColor' ] },
+	        { name: 'tools', items : [ 'Maximize', 'ShowBlocks' ] }
+		];
+		
+		
+	};
+	
+	//CKEDITOR.basePath = "ckeditor";
+	
+	CKEDITOR.replace('editme',
+	{
+		skin : 'so',
+		customConfig : '',
+		
+		removePlugins:  'bidi,div,forms,iframe,newpage,pagebreak,preview,print,scayt,smiley,styles,templates,wsc',
+		toolbar: 'SOToolbar',
+		
+		toolbar_SOToolbar:
+			[
+				{ name: 'document', items : [ 'Source' ] },
+				{ name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+				{ name: 'editing', items : [ 'Find','Replace','-','SelectAll' ] },
+				//'/',
+				{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+				{ name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ] },
+		        { name: 'links', items : [ 'Link','Unlink' ] },
+		        { name: 'insert', items : [ 'Image','Flash','Table','HorizontalRule','SpecialChar' ] },
+		        //'/',
+		        { name: 'styles', items : [ 'Format','Font','FontSize' ] },
+		        { name: 'colors', items : [ 'TextColor','BGColor' ] },
+		        { name: 'tools', items : [ 'Maximize', 'ShowBlocks' ] }
+			]
+	});
+	
+}
+
+
+</script>
+<link rel="stylesheet" type="text/css" href="../source/skins/so/editor.css?t=B8DJ5M3">
+<link rel="stylesheet" type="text/css" href="../source/skins/so/dialog.css?t=B8DJ5M3">
+
+<style type="text/css">
+
+
+</style>
+</head>
+<body onload="startup()">
+<div id="toolbar"></div>
+<hr>
+<textarea id="editme" name="editme">
+This is <b>simple</b> text to edit
+</textarea>
+
+<hr>
+<div id="footer"></div>
+
+</div>
+</body>
+</html>
